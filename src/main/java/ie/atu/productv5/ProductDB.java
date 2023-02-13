@@ -75,7 +75,7 @@ public class ProductDB {
             a.setNeutered("No");
             a.setType("German Shepherd");
             a.setBreed("Sporting");
-            a.setVaccination("true");
+            a.setVaccination("Yes");
             p = a;
         }
         return p;
