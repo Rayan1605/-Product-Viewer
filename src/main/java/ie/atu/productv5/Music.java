@@ -28,6 +28,6 @@ private String Label;
 
     @Override
     public String toString() {
-        return super.toString()  +  getArtist() + "\n Part of " + getLabel();
+        return super.toString()  +  getArtist() + "\n Part of " + getLabel() + "\nPrice is " + getPrice();
     }
 }

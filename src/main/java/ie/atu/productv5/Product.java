@@ -2,7 +2,7 @@ package ie.atu.productv5;
 
 import java.text.NumberFormat;
 
-public class Product {
+public class Product implements Description{
 
     private String code;
     private String description;
@@ -34,11 +34,6 @@ public class Product {
 
     public double getPrice() {
         return price;
-    }
-
-    public String getPriceFormatted() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        return currency.format(price);
     }
 
     @Override

@@ -13,6 +13,9 @@ public class ProductApp {
         System.out.println("Welcome to the Product Viewer");
         System.out.println();
 
+
+
+
         // perform 1 or more selections
         @SuppressWarnings("resource")
         Scanner sc = new Scanner(System.in);
@@ -22,13 +25,13 @@ public class ProductApp {
             String productCode = sc.nextLine();  // read the product code
 
             // get the Product object
-            ie.atu.productv5.Product p = ProductDB.getProduct(productCode);
+            Description p = ProductDB.getProduct(productCode);
 
             // display the output
             System.out.println();
             if (p != null) {
                 System.out.println("Description: " + p.toString());
-                System.out.println("Price:       " + p.getPriceFormatted());
+
             } else {
                 System.out.println("No product matches this product code.");
             }
@@ -41,6 +44,8 @@ public class ProductApp {
             choice = sc.nextLine();
             System.out.println();
         }
+
+
     }
 }
 

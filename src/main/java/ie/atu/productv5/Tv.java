@@ -28,6 +28,7 @@ public class Tv extends Product{
     }
     @Override
     public String  toString(){
-       return super.toString() + getManufacture() + "\n" + "Screen size is " + getScreensize();
+       return super.toString() + getManufacture() + "\n" + "Screen size is " + getScreensize()  +
+               "\nThe price is " + getPrice();
     }
 }
