@@ -36,11 +36,6 @@ public class Product implements Description{
         return price;
     }
 
-    public String getPriceFormatted() {
-        NumberFormat currency = NumberFormat.getCurrencyInstance();
-        return currency.format(price);
-    }
-
     @Override
     public String toString() {
         return description;
