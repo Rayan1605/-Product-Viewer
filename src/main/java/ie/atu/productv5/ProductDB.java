@@ -2,13 +2,13 @@ package ie.atu.productv5;
 
 public class ProductDB {
 
-    public static ie.atu.productv5.Product getProduct(String productCode) {
+    public static Description getProduct(String productCode) {
         // In a more realistic application, this code would
         // get the data for the product from a file or database
         // For now, this code just uses if/else statements
         // to return the correct product data
 
-        Product p = null;
+        Description p = null;
 
         if (productCode.equalsIgnoreCase("java")
                 || productCode.equalsIgnoreCase("jsp")
@@ -55,6 +55,28 @@ public class ProductDB {
             tv.setDescription("SONY BRAVIA SMART TV KDL43WF663 BY ");
             tv.setScreensize(55);
             p=tv;
+        }
+        else if(productCode.equalsIgnoreCase("horse")){
+            Horse horse = new Horse();
+            horse.setAge(25);
+            horse.setHeight(150);
+            horse.setDam("Yes");
+            horse.setSire("No");
+            horse.setType("Arabian horse");
+            horse.setBreed("Arabian");
+            p = horse;
+        }
+
+
+        else if(productCode.equalsIgnoreCase("dog")){
+            Dog a = new Dog();
+            a.setAge(10);
+            a.setShedding("Yes");
+            a.setNeutered("No");
+            a.setType("German Shepherd");
+            a.setBreed("Sporting");
+            a.setVaccination("true");
+            p = a;
         }
         return p;
     }

@@ -1,14 +1,17 @@
 package ie.atu.productv4;
 
+import ie.atu.productv5.Description;
+
 public class ProductDB {
 
-    public static Product getProduct(String productCode) {
+    public static Description getProduct(String productCode) {
         // In a more realistic application, this code would
         // get the data for the product from a file or database
         // For now, this code just uses if/else statements
         // to return the correct product data
 
-        Product p = null;
+        Description p = null;
+
 
         if (productCode.equalsIgnoreCase("java")
                 || productCode.equalsIgnoreCase("jsp")
@@ -30,14 +33,20 @@ public class ProductDB {
                 b.setPrice(54.50);
                 b.setAuthor("Joe Mura");
             }
-            p = b; // set Product object equal to the Book object
+            p = (Description) b; // set Product object equal to the Book object
         } else if (productCode.equalsIgnoreCase("netbeans")) {
             Software s = new Software();
             s.setCode("netbeans");
             s.setDescription("NetBeans");
             s.setPrice(0.00);
             s.setVersion("8.2");
-            p = s; // set Product object equal to the Software object
+            p = (Description) s; // set Product object equal to the Software object
+        }
+        else if(productCode.equalsIgnoreCase("horse")){
+
+        }
+        else if(productCode.equalsIgnoreCase("dog")){
+
         }
         return p;
     }

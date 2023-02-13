@@ -1,5 +1,7 @@
 package ie.atu.productv4;
 
+import ie.atu.productv5.Description;
+
 import java.util.Scanner;
 
 public class ProductApp {
@@ -18,13 +20,12 @@ public class ProductApp {
             String productCode = sc.nextLine();  // read the product code
 
             // get the Product object
-            Product p = ProductDB.getProduct(productCode);
+            Description p = ProductDB.getProduct(productCode);
 
             // display the output
             System.out.println();
             if (p != null) {
                 System.out.println("Description: " + p.toString());
-                System.out.println("Price:       " + p.getPriceFormatted());
             } else {
                 System.out.println("No product matches this product code.");
             }
